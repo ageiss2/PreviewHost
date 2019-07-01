@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace PreviewHost.Interop
 {
@@ -9,5 +10,12 @@ namespace PreviewHost.Interop
         public int Top;
         public int Right;
         public int Bottom;
+
+        public Rect(Rectangle rect) : this() {
+            Left = rect.Left;
+            Top = rect.Top;
+            Right = rect.Right;
+            Bottom = rect.Bottom;
+        }
     }
 }

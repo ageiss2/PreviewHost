@@ -33,7 +33,7 @@ namespace PreviewHost
             if (!isDropAllowed)
                 return;
             foreach (var file in (string[])e.Data.GetData(DataFormats.FileDrop, true))
-                (new PreviewWindow(file)).Show();
+                (new PreviewHostWindow(file)).Show();
         }
     }
 }
